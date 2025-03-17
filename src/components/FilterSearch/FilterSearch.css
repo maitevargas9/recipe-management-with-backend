@@ -1,0 +1,35 @@
+.search-input-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.search-input {
+    padding: 12px;
+    border: 2px solid #b3cde0;
+    border-radius: 8px;
+    width: 40%;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #b2a7d5;
+}
+
+.filter-select {
+    padding: 12px;
+    border: 2px solid #b3cde0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    width: 28%;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #b2a7d5;
+}

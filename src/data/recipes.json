@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "title": "Feta with honey",
+    "category": "Starter",
+    "ingredients": [
+      "feta cheese", "flaky pastry", "honey", "olive oil"
+    ],
+    "preparation": "Wrap the feta cheese in the puff pastry. Heat the olive oil in a frying pan and fry the puff pasty. When everything is golden brown, serve on a plate and decorate with honey."
+  },
+  {
+    "id": "2",
+    "title": "Greek Salad",
+    "category": "Starter",
+    "ingredients": [
+      "500g tomatoes", "1 cucumber", "1 pepper (green)", "1 pepper (red)", "2 onions", "1 glass of olives", "1 feta cheese", "125ml olive oil", "1 lemon (juice)", "salt", "pepper", "oregano"
+    ],
+    "preparation": "Wash cucumber and cut into thin slices or pieces. Wash peppers, deseed and cut into thin strips. Wash tomatoes and eighths. Peel onions and cut into thin rings. Dice feta cheese and sprinkle with oregano. Drain olives and put in a bowl with cucumber, peppers, tomatoes, onions and feta cheese. Stir olive oil, lemon juice, salt and pepper into a sauce and pour over salad. Stir."
+  },
+  {
+    "id": "3",
+    "title": "Pasta with tomato sauce",
+    "category": "Main Dish",
+    "ingredients": [
+      "500g pasta (Penne)", "780g tomate frito", "150g chorizo", "oregano", "parmesan"
+    ],
+    "preparation": "Cut the chorizo into small pieces. Put the sauce in a saucepan and heat. Add the chorizo and oregano. Meanwhile, cook and shake the pasta as soon as they are done. Then add the pasta to the sauce and let it sit for 5 to 10 minutes. Serve the pasta with the sauce and sprinkle with parmesan."
+  },
+  {
+    "id": "4",
+    "title": "Bibimbap",
+    "category": "Main Dish",
+    "ingredients": [
+      "50g rice (sushi)", "1 carrot", "2  mushrooms (champignons)", "25g zucchini", "lettuce (2 leaves)", "1 egg (fried egg)", "20g beef", "gochujang (red chili paste)", "sunflower oil", "sesame oil", "soy sauce"
+    ],
+    "preparation": "Cook the rice. While the rice is cooking, wash and cut the vegetables. Cut the beef into small pieces. Fry the vegetables (except the lettuce) one by one in a pan with very little sunflower oil. Make the fried egg. In the pan fry the beef with the sesame oil and soy sauce. Put the rice in a bowl. Then add the vegetables, the beef and the fried egg. Add gochujang to taste."
+  },
+  {
+    "id": "5",
+    "title": "Raspberry Dessert with Speculatius",
+    "category": "Dessert",
+    "ingredients": [
+      "200ml cream", "250g mascarpone", "250g quark", "125g sugar", "8g vanillin sugar", "350g raspberry (frozen)", "250g spekulatius (biscuit)", "15ml lemon juice"
+    ],
+    "preparation": "Whisk the cream (200ml). Mix the quark, mascarpone, sugar, vanillin sugar and lemon juice. Fold in the cream. Cover the bottom with three or four tablespoons of cream in a sufficiently high square or round bowl. Spread a layer of speculatius, broken whole or in pieces. Spread half of the remaining cream on top. Spread the frozen raspberries on top, cover with the rest of the cream so that they are no longer visible. Spread crumbled speculatius (quantity as desired) over. The cream must be refrigerated for at least 4 hours. Before serving, you can sprinkle some icing sugar on top."
+  },
+  {
+    "id": "6",
+    "title": "Chocolate cake",
+    "category": "Dessert",
+    "ingredients": [
+      "250g butter", "250g sugar", "4 eggs", "8g vanillin sugar", "180g flour", "2 teaspoons baking powder", "250g chocolate (melted)", "6 tablespoons water"
+    ],
+    "preparation": "Mix all the ingredients together and bake at 170 C for about 1 hour."
+  }
+]

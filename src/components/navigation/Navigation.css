@@ -1,0 +1,39 @@
+.navbar {
+    background-color: #b3cde0;
+    padding: 10px 10px;
+    border-radius: 4px;
+    position: absolute;
+    top: 87%;
+    left: 33%;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-right: 0px;
+}
+
+.nav-link {
+    color: #4d8a3a;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-link:hover {
+    background-color: #a8d0e6;
+}
+
+.nav-link.active {
+    background-color: #a4d7a4;
+}

@@ -1,0 +1,88 @@
+.add-edit-container {
+    position: relative;
+    top: 140px;
+    left: 400px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    background-color: #fef6e4;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff8f1;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input,
+textarea {
+    padding: 12px;
+    font-size: 14px;
+    border: 2px solid #ffcad4;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: #fff;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #ff99ac;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #c4a7b3;
+}
+
+button {
+    padding: 12px 15px;
+    font-size: 16px;
+    background-color: #ffb3c6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff758f;
+}
+
+button[type="button"] {
+    background-color: #ff8fa3;
+}
+
+button[type="button"]:hover {
+    background-color: #ff5d73;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #a06cd5;
+}
+
+input,
+textarea {
+    margin-bottom: 10px;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    background-color: #f8d7da;
+    padding: 10px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: block;
+}

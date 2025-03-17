@@ -1,13 +1,7 @@
-import RecipeManagementLogo from "/src/assets/recipe-management.png";
-import "./App.css";
+import AppRouter from "./routes/Router";
 
 function App() {
-  return (
-    <div>
-      <img src={RecipeManagementLogo} alt="Recipe Management Logo" />
-      <h1>Recipe Management</h1>
-    </div>
-  );
+  return <AppRouter />;
 }
 
 export default App;

@@ -1,0 +1,70 @@
+.recipe-card {
+    position: relative;
+    top: 140px;
+    margin: 0 100px 50px 250px;
+    background-color: #f3e8ff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    height: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.recipe-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #4c73b2;
+    margin-bottom: 12px;
+    margin-top: 5px;
+}
+
+.recipe-category,
+.ingredients-list,
+.preparation-text {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    width: 100%;
+}
+
+.preparation-text {
+    margin-bottom: 20px;
+}
+
+.favorite-btn {
+    padding: 10px 20px;
+    background-color: #4c73b2;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px 5px;
+}
+
+.favorite-btn:hover {
+    background-color: #3e64a1;
+    transform: scale(1.05);
+}
+
+.favorite-btn:focus {
+    outline: none;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #6c5b8b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-right: 15px;
+}
+
+.back-link:hover {
+    color: #4c73b2;
+}
