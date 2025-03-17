@@ -6,7 +6,6 @@ import {
   getAllIngredients,
   filterRecipes
 } from "../../util/filterUtil.js";
-import dataRecipes from "../../data/recipes.json" with { type: "json" };
 import "./Favorites.css";
 
 export default function Favorites() {
@@ -22,11 +21,11 @@ export default function Favorites() {
     setFavoritesData(savedFavorites);
     setRecipesData(savedRecipes);
   }, []);
-    
+
   const favoriteRecipes = recipesData.filter(recipe =>
     favoritesData.includes(recipe.id)
   );
-    
+
   const allCategories = getAllCategories(favoriteRecipes);
   const allIngredients = getAllIngredients(favoriteRecipes);
   const filteredRecipes = filterRecipes(

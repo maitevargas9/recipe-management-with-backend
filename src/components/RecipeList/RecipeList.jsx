@@ -6,7 +6,6 @@ import {
   getAllIngredients,
   filterRecipes
 } from "../../util/filterUtil.js";
-import dataRecipes from "../../data/recipes.json" with { type: "json" };
 import "./RecipeList.css";
 
 export default function RecipeList() {
@@ -19,7 +18,7 @@ export default function RecipeList() {
     const savedRecipes = JSON.parse(localStorage.getItem("recipes")) || [];
     setRecipes(savedRecipes);
   }, []);
-  
+
   const allCategories = getAllCategories(recipes);
   const allIngredients = getAllIngredients(recipes);
   const filteredRecipes = filterRecipes(recipes, search, category, ingredients);
