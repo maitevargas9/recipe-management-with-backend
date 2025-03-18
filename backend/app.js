@@ -3,7 +3,7 @@ import cors from "cors";
 import fs from "fs";
 
 const app = express();
-const DATA_FILE = "./recipes.json";
+const RECIPES_FILE = "./recipes.json";
 const FAVORITES_FILE = "./favorites.json";
 
 app.use(express.json());
@@ -11,15 +11,20 @@ app.use(cors());
 
 const loadData = (file) => {
   if (!fs.existsSync(file)) return [];
-  const data = fs.readFileSync(file);
-  return JSON.parse(data);
+  try {
+    const data = fs.readFileSync(file, "utf-8");
+    return data ? JSON.parse(data) : [];
+  } catch (error) {
+    console.error(`Error loading file ${file}:`, error);
+    return [];
+  }
 };
 
 const saveData = (file, data) => {
   fs.writeFileSync(file, JSON.stringify(data, null, 2));
 };
 
-let recipes = loadData(DATA_FILE);
+let recipes = loadData(RECIPES_FILE);
 let favorites = loadData(FAVORITES_FILE);
 
 app.get("/recipes", (req, res) => {
@@ -27,9 +32,15 @@ app.get("/recipes", (req, res) => {
 });
 
 app.post("/recipes", (req, res) => {
+  const { title, category, ingredients, preparation } = req.body;
+  if (!title || !category || !ingredients || !preparation) {
+    return res
+      .status(400)
+      .json({ message: "Title and ingredients are required" });
+  }
   const newRecipe = { id: recipes.length + 1, ...req.body };
   recipes.push(newRecipe);
-  saveRecipes(recipes);
+  saveData(RECIPES_FILE, recipes);
   res.status(201).json(newRecipe);
 });
 
@@ -44,13 +55,13 @@ app.put("/recipes/:id", (req, res) => {
   if (index === -1)
     return res.status(404).json({ message: "Recipe not found" });
   recipes[index] = { ...recipes[index], ...req.body };
-  saveRecipes(recipes);
+  saveData(RECIPES_FILE, recipes);
   res.json(recipes[index]);
 });
 
 app.delete("/recipes/:id", (req, res) => {
   recipes = recipes.filter((r) => r.id !== parseInt(req.params.id));
-  saveRecipes(recipes);
+  saveData(RECIPES_FILE, recipes);
   res.json({ message: "Recipe deleted" });
 });
 
@@ -64,9 +75,10 @@ app.post("/favorites", (req, res) => {
 });
 
 app.delete("/favorites/:id", (req, res) => {
-  favorites = favorites.filter((favId) => favId !== parseInt(req.params.id));
+  const favId = parseInt(req.params.id);
+  favorites = favorites.filter((favId) => favId !== favId);
   saveData(FAVORITES_FILE, favorites);
-  res.json({ message: "Recipe deleted to favorites", favorites });
+  res.json({ message: "Recipe deleted from favorites", favorites });
 });
 
 app.listen(3000, () => {
