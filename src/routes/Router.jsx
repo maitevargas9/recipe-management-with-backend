@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       { index: true, element: <RecipeListPage /> },
-      { path: "recipe/:id", element: <RecipeDetailPage /> },
+      { path: "recipes/:id", element: <RecipeDetailPage /> },
       { path: "favorites", element: <FavoritesPage /> },
       { path: "add-recipe", element: <RecipeFormPage /> },
       { path: "edit-recipe/:id", element: <RecipeFormPage /> }

@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { fetchRecipes } from "../../store/store";
 import FilterSearch from "../FilterSearch/FilterSearch.jsx";
 import {
   getAllCategories,
@@ -12,12 +14,16 @@ export default function RecipeList() {
   const [search, setSearch] = useState("");
   const [category, setCategories] = useState("All Categories");
   const [ingredients, setIngredients] = useState("All Ingredients");
-  const [recipes, setRecipes] = useState([]);
 
-  useEffect(() => {
-    const savedRecipes = JSON.parse(localStorage.getItem("recipes")) || [];
-    setRecipes(savedRecipes);
-  }, []);
+  const dispatch = useDispatch();
+  const recipes = useSelector(state => state.recipes);
+
+  useEffect(
+    () => {
+      dispatch(fetchRecipes());
+    },
+    [dispatch]
+  );
 
   const allCategories = getAllCategories(recipes);
   const allIngredients = getAllIngredients(recipes);
